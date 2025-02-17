@@ -10,8 +10,22 @@ import taskRoutes from "./routes/taskRoutes";
 import searchRoutes from "./routes/searchRoutes";
 import userRoutes from "./routes/userRoutes";
 import teamRoutes from "./routes/teamRoutes";
+import { PrismaClient } from "@prisma/client";
 
 /* CONFIGURATIONS */
+const prisma = new PrismaClient();
+
+async function connectToDatabase() {
+  try {
+    await prisma.$connect();
+    console.log("Connected to PostgreSQL via Prisma");
+  } catch (error) {
+    console.error("Failed to connect to PostgreSQL:", error);
+    process.exit(1);
+  }
+}
+
+connectToDatabase();
 dotenv.config();
 const app = express();
 app.use(express.json());
