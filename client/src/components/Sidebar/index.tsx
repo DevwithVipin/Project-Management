@@ -166,7 +166,7 @@ const Sidebar = () => {
           <div className="align-center flex h-9 w-9 justify-center">
             {!!currentUserDetails?.profilePictureUrl ? (
               <Image
-                src={`https://project-management-pm.s3.eu-north-1.amazonaws.com/public//${currentUserDetails?.profilePictureUrl}`}
+                src={`https://project-management-pm.s3.eu-north-1.amazonaws.com/public/${currentUserDetails?.profilePictureUrl}`}
                 alt={currentUserDetails?.username || "User Profile Picture"}
                 width={100}
                 height={50}

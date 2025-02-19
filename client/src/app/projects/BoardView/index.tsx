@@ -174,7 +174,7 @@ const Task = ({ task }: TaskProps) => {
     >
       {task.attachments && task.attachments.length > 0 && (
         <Image
-          src={`https://project-management-pm.s3.eu-north-1.amazonaws.com/public//${task.attachments[0].fileURL}`}
+          src={`https://project-management-pm.s3.eu-north-1.amazonaws.com/public/${task.attachments[0].fileURL}`}
           alt={task.attachments[0].fileName}
           width={400}
           height={200}
@@ -226,7 +226,7 @@ const Task = ({ task }: TaskProps) => {
             {task.assignee && (
               <Image
                 key={task.assignee.userId}
-                src={`https://project-management-pm.s3.eu-north-1.amazonaws.com/public//${task.assignee.profilePictureUrl!}`}
+                src={`https://project-management-pm.s3.eu-north-1.amazonaws.com/public/${task.assignee.profilePictureUrl!}`}
                 alt={task.assignee.username}
                 width={30}
                 height={30}
@@ -236,7 +236,7 @@ const Task = ({ task }: TaskProps) => {
             {task.author && (
               <Image
                 key={task.author.userId}
-                src={`https://project-management-pm.s3.eu-north-1.amazonaws.com/public//${task.author.profilePictureUrl!}`}
+                src={`https://project-management-pm.s3.eu-north-1.amazonaws.com/public/${task.author.profilePictureUrl!}`}
                 alt={task.author.username}
                 width={30}
                 height={30}
